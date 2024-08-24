@@ -9,3 +9,5 @@ function doSomething(pair: readonly [string, number]) {
 
 // Const assertions
 let point = [3, 4] as const;
+
+export { }

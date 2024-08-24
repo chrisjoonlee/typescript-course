@@ -5,6 +5,7 @@ function greeter(fn: (a: string) => void) {
 
 // Type alias
 type GreetFunction = (a: string) => void;
+
 function greeter2(fn: GreetFunction) {
     // ...
 }

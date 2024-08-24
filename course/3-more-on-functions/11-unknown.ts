@@ -1,6 +1,6 @@
 // Type-safe version of any
 // Useful for describing functions that accept any value without
-// having any values in the function body
+// having "any" values in the function body
 
 function f1(a: any) {
     a.b(); // OK

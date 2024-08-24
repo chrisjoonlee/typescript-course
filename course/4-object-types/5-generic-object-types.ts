@@ -17,6 +17,7 @@ function setContents<Type>(box: Box<Type>, newContents: Type) {
 }
 
 
+
 // Generic type aliases
 type OrNull<Type> = Type | null;
 
@@ -27,5 +28,24 @@ type OneOrManyOrNull<Type> = OrNull<OneOrMany<Type>>;
 type OneOrManyOrNull2<Type> = OneOrMany<Type> | null
 
 type OneOrManyOrNullStrings = OneOrManyOrNull<string>;
+
+
+
+// Non-generic type, generic function signature
+interface GenericIdentityFn {
+    <Type>(arg: Type): Type;
+}
+
+// Generic type, non-generic function signature
+interface GenericIdentityFn2<Type> {
+    (arg: Type): Type;
+}
+
+function identity<Type>(arg: Type): Type {
+    return arg;
+}
+
+let myIdentity: GenericIdentityFn = identity;
+
 
 export { }

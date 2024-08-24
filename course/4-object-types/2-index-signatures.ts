@@ -40,6 +40,7 @@ interface ReadonlyStringArray {
 }
 
 const myArray2: ReadonlyStringArray = ["Mon", "Tue", "Wed"];
+
 // @ts-expect-error
 myArray2[2] = "Thu";
 

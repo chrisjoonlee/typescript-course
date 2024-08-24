@@ -12,7 +12,7 @@ function doSomething(obj: SomeType) {
     console.log(`prop has the value '${obj.prop}'.`);
 
     // @ts-expect-error
-    obj.prop = "hello";
+    obj.prop = "hello"; // Error
 }
 
 
